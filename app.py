@@ -7,6 +7,10 @@ app.config['SECRET_KEY'] = "mysecretket"
 def index():
     return redirect(url_for('dashboard'))
 
+@app.route('/profile')
+def profile():
+    return render_template('/profile.html')
+
 @app.route('/dashboard')
 def dashboard():
     return render_template('/dashboard.html')
